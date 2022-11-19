@@ -1,20 +1,24 @@
 <template>
   <div>
-    <div class="header">
-      <h1 class="header_logo font--hero font--size--pack">All CHANNELS LIST</h1>
-    </div>
+    <HeaderPage HeaderPage="All Channels List" />
 
     <v-container fill-height fluid>
       <v-row align="center" justify="center">
         <v-col>
-          <h1 class="text-center font--hero">CHANNELS LIST</h1>
-          <v-divider class="mx-4 devider--title yellow"></v-divider>
+          <h1
+            class="text-center font--hero animate__animated animate__fadeInUp"
+          >
+            CHANNELS LIST
+          </h1>
+          <v-divider
+            class="mx-4 devider--title yellow animate__animated animate__fadeInUp"
+          ></v-divider>
           <v-container>
             <v-expansion-panels
               accordion
               focusable
               popout
-              class="btn--margin"
+              class="btn--margin animate__animated animate__fadeInUp"
               v-for="(item, i) in channels"
               :key="i"
             >
@@ -41,10 +45,12 @@
 </template>
 
 <script>
+import HeaderPage from "@/components/HeaderPage.vue";
 import Footer from "@/components/FooterSection.vue";
 export default {
   components: {
     Footer,
+    HeaderPage,
   },
   data() {
     return {
@@ -116,12 +122,6 @@ export default {
 </script>
 
 <style scoped>
-@import url(//db.onlinewebfonts.com/c/5a0d9223ba883aeb0aa77cdf39cab746?family=Klavika+Condensed);
-
-.font--hero {
-  font-family: "Klavika Condensed" !important;
-}
-
 .devider--title {
   margin-left: 40% !important;
   margin-right: 40% !important;
@@ -157,47 +157,5 @@ body {
 
 .footer--margin {
   margin-top: 200px !important;
-}
-
-@media only screen and (max-width: 600px) {
-  .header[data-v-bbde4a70] {
-    margin-top: -20% !important;
-  }
-
-  .header_logo {
-    margin-top: 10% !important;
-  }
-}
-
-.header {
-  margin-top: -10% !important;
-  width: 100%;
-  height: 500px;
-  font-weight: bold;
-  text-align: center;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.header.small {
-  height: 70px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-.header.small ~ .offset {
-  padding-top: 140px;
-}
-.header.small .header_logo {
-  padding-top: 20px;
-  font-size: 20px;
-  text-shadow: none;
-}
-
-.header_logo {
-  font-family: "Oswald", sans-serif;
-  margin-top: 5%;
-  padding-top: 200px;
-  color: white;
-  font-size: 50px;
-  text-shadow: 3px 4px rgba(200, 0, 255, 0.1);
-  transition: 0.3s;
 }
 </style>

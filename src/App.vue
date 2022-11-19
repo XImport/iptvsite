@@ -62,7 +62,12 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="(item, index) in HomeNavButtons" :key="index" link>
+        <v-list-item
+          v-for="(item, index) in HomeNavButtons"
+          :key="index"
+          link
+          :to="item.url"
+        >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -93,13 +98,19 @@ export default {
       { label: "Home", icon: "mdi-home", url: "/" },
       { label: "IPTV PRICING", icon: "mdi-wallet-membership", url: "#" },
       { label: "CHANNELS LIST", icon: "mdi-television-box", url: "/channels" },
-      { label: "CONTACT", icon: "mdi-email", url: "#" },
+      { label: "CONTACT", icon: "mdi-email", url: "/contact" },
     ],
   }),
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+
       if (this.scrollPosition > 599) {
+        this.navstate = "changeColor elevation-0";
+      } else if (
+        window.matchMedia("only screen and (max-width: 760px)").matches &&
+        this.scrollPosition > 100
+      ) {
         this.navstate = "changeColor elevation-0";
       } else {
         this.navstate = "transparent elevation-0";
