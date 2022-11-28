@@ -36,13 +36,19 @@
       </div>
       <v-spacer></v-spacer>
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-        class="hidden-sm-and-down transparent white--text animate__animated animate__fadeInUp"
+        class="transparent ml-4 white--text mode"
+        fab
+        small
+        @click="switchTheme()"
+        v-if="islight"
+
+
+
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon> mdi-lightbulb-on </v-icon>
+      </v-btn>
+      <v-btn class="transparent ml-4 white--text mode" fab small  @click="switchTheme()" v-if="isdark" >
+        <v-icon> mdi-lightbulb </v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -91,12 +97,15 @@ export default {
 
   data: () => ({
     navstate: "transparent elevation-0",
+    isdark: null,
+    islight :null,
+
     scrollPosition: null,
     drawer: false,
 
     HomeNavButtons: [
       { label: "Home", icon: "mdi-home", url: "/" },
-      { label: "IPTV PRICING", icon: "mdi-wallet-membership", url: "#" },
+      { label: "IPTV PRICING", icon: "mdi-wallet-membership", url: "/pricing" },
       { label: "CHANNELS LIST", icon: "mdi-television-box", url: "/channels" },
       { label: "CONTACT", icon: "mdi-email", url: "/contact" },
     ],
@@ -107,14 +116,31 @@ export default {
 
       if (this.scrollPosition > 599) {
         this.navstate = "changeColor elevation-0";
+        this.mode = "changeColor elevation-0";
       } else if (
         window.matchMedia("only screen and (max-width: 760px)").matches &&
         this.scrollPosition > 100
       ) {
         this.navstate = "changeColor elevation-0";
+        this.mode = "changeColor elevation-0";
       } else {
         this.navstate = "transparent elevation-0";
+        this.mode = "transparent elevation-0";
       }
+    },
+    switchTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.setItem('theme', this.$vuetify.theme.dark ? 'dark' : 'light');
+      this.isdark =!this.isdark;
+      this.islight = !this.islight;
+      // if (this.$vuetify.theme.light) {
+      //   console.log("light theme");
+      // }
+      // if (this.$vuetify.theme.light) {
+      //   console.log("light theme");
+      // }
+      // this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      // this.$cookies.set('app.darkMode', this.$vuetify.theme.dark);
     },
   },
   mounted() {
@@ -123,6 +149,12 @@ export default {
     }
     window.addEventListener("scroll", this.updateScroll);
   },
+
+created(){
+  this.islight = true
+  this.isdark = false
+},
+
   watch: {
     $route() {
       if (this.$route.name == "sdsachannels") {
@@ -153,5 +185,9 @@ export default {
 .changeColor {
   background-color: rgb(0, 0, 0) !important;
   transition: all 0.5s ease-in !important;
+}
+
+.mode {
+  box-shadow: none !important;
 }
 </style>

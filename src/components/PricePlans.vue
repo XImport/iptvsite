@@ -1,28 +1,9 @@
 <template>
   <div
     class="justify-center"
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-once="true"
-    data-aos-anchor-placement="top-center"
+
   >
-    <div>
-      <h1 class="text-center font--hero animate__animated animate__fadeInUp">
-        SIMPLE & FAIR PRICES FOR ALL
-      </h1>
-      <v-divider class="mx-4 devider--title yellow"></v-divider>
-      <h3
-        class="text-center mt-2 font--sub--hero font--hero animate__animated animate__fadeInUp"
-      >
-        which subscription plan is right for you ?
-      </h3>
-      <h4
-        class="text-center mt-2 font--hero font--size--pack animate__animated animate__fadeInUp"
-        data-aos="zoom-in"
-      >
-        STANDARD PACK
-      </h4>
-    </div>
+
     <div class="background mt-6 animate__animated animate__fadeInUp">
       <div class="container">
         <div class="panel pricing-table">

@@ -10,6 +10,17 @@
         </h1>
       </div>
       <v-form ref="form" v-model="valid" lazy-validation>
+        <v-alert
+        v-if="alert"
+      dense
+      text
+      type="success"
+      dismissible
+      transition="scale-transition"
+
+    >
+      Please Wait While we trying to redirect you to <strong>whatsapp </strong> 
+    </v-alert>
         <v-text-field
           v-model="name"
           :counter="30"
@@ -56,6 +67,7 @@ export default {
   components: { HeaderPageVue, Footer },
   data: () => ({
     valid: true,
+    alert: false,
     name: "",
     nameRules: [
       (v) => !!v || "Name is required",
@@ -74,7 +86,10 @@ export default {
 
   methods: {
     validate() {
-      this.$refs.form.validate();
+      if(this.$refs.form.validate()){
+this.alert = !this.alert;
+this.reset()
+      };
     },
     reset() {
       this.$refs.form.reset();

@@ -55,6 +55,23 @@
     </div>
     <div class="pb-12">
       <v-container>
+        <div>
+      <h1 class="text-center font--hero animate__animated animate__fadeInUp">
+        SIMPLE & FAIR PRICES FOR ALL
+      </h1>
+      <v-divider class="mx-4 devider--title yellow"></v-divider>
+      <h3
+        class="text-center mt-2 font--sub--hero font--hero animate__animated animate__fadeInUp"
+      >
+        which subscription plan is right for you ?
+      </h3>
+      <h4
+        class="text-center mt-2 font--hero font--size--pack animate__animated animate__fadeInUp"
+        data-aos="zoom-in"
+      >
+        STANDARD PACK
+      </h4>
+    </div>
         <PricePlans />
       </v-container>
       <v-container>
@@ -168,4 +185,19 @@ export default {
     left: 50%;
   }
 }
+
+.devider--title {
+  margin-left: 40% !important;
+  margin-right: 40% !important;
+  margin-top: 20px;
+  font-weight: 500 !important;
+  color: yellow !important;
+}
+
+
+.font--size--pack {
+    font-size: 40px;
+    color: #275084;
+  }
+  
 </style>
