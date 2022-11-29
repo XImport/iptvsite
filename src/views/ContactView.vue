@@ -11,16 +11,16 @@
       </div>
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-alert
-        v-if="alert"
-      dense
-      text
-      type="success"
-      dismissible
-      transition="scale-transition"
-
-    >
-      Please Wait While we trying to redirect you to <strong>whatsapp </strong> 
-    </v-alert>
+          v-if="alert"
+          dense
+          text
+          type="success"
+          dismissible
+          transition="scale-transition"
+        >
+          Please Wait While we trying to redirect you to
+          <strong>whatsapp </strong>
+        </v-alert>
         <v-text-field
           v-model="name"
           :counter="30"
@@ -63,6 +63,7 @@
 <script>
 import HeaderPageVue from "@/components/HeaderPage.vue";
 import Footer from "@/components/FooterSection.vue";
+import axios from "axios";
 export default {
   components: { HeaderPageVue, Footer },
   data: () => ({
@@ -86,16 +87,39 @@ export default {
 
   methods: {
     validate() {
-      if(this.$refs.form.validate()){
-this.alert = !this.alert;
-this.reset()
-      };
+      if (this.$refs.form.validate()) {
+        this.sendWhatsappMessage();
+        this.alert = !this.alert;
+        this.reset();
+      }
     },
     reset() {
       this.$refs.form.reset();
     },
-    resetValidation() {
-      this.$refs.form.resetValidation();
+    sendWhatsappMessage() {
+      var name = this.name;
+      var email = this.email;
+      var subscription = this.select;
+      var whatsappNumber = "212647894983";
+      var url =
+        "https://api.whatsapp.com/send?phone=" +
+        whatsappNumber +
+        email +
+        "&text=" +
+        "Hello Sir My Name is : " +
+        name +
+        " im intrested with your service and i would like to be part of your community " +
+        "%0a" +
+        "here is My Email if you prefer it  : " +
+        email +
+        "%0a" +
+        "otherwise i would like to get  : " +
+        subscription +
+        " subscriptions Thank you " +
+        "%0a" +
+        "Have a good Day !";
+
+      window.open(url, "_blank").focus();
     },
   },
 };
