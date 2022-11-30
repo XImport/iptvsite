@@ -2,7 +2,7 @@
   <div>
     <HeaderPageVue HeaderPage="Contact US " />
     <v-container
-      class="animate__animated animate__fadeInUpanimate__animated animate__fadeInUp"
+      class="animate__animated animate__fadeInUpanimate__animated animate__fadeInUp pb-12"
     >
       <div>
         <h1 class="text-center mt-6 font--hero">
