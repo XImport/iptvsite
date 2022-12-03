@@ -4,7 +4,7 @@
 
   >
 
-    <div class="background mt-6 animate__animated animate__fadeInUp">
+    <div class="background mt-6 animate__animated animate__fadeInUp" >
       <div class="container">
         <div class="panel pricing-table">
           <div class="pricing-plan">
@@ -122,7 +122,7 @@ html {
   background: #081b31;
   background: -moz-linear-gradient(top, #010e1e 0%, #b400ba 100%);
   background: -webkit-linear-gradient(top, #050b11 0%, #091f3a 100%);
-  background: linear-gradient(to bottom, #ae01a2 100%, #1f0042 100%);
+  background: linear-gradient(to bottom, #6a0e63 100%, #1f0042 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
   height: 350px;
   left: 0;

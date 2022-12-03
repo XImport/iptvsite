@@ -4,26 +4,38 @@
       <h1 class="text-center">IN OUR SERVICE</h1>
       <v-divider class="mx-4 devider--title yellow"></v-divider>
     </div>
-    <div class="d-flex flex-row mb-6 justify-center flex--cards">
-      <div v-for="(card, index) in cardsLanding" :key="index" class=" pa-6 mt-6">
-        <v-card class="   animate__animated animate__fadeInUp" max-width="320">
-          <v-img :src="card.src"></v-img>
 
-          <v-card-title class="justify-center ">{{ card.Title }}</v-card-title>
-          <v-card-subtitle class="text-center">{{
+    <v-container
+      fluid
+      style="margin-left: 10%; padding: 50px; width: 80%; margin-right: 50%"
+    >
+      <v-row no-gutters class="rounded-xl SoftBgGrey pa-4">
+        <v-col
+          v-for="(card, index) in cardsLanding"
+          :key="index"
+          class="pa-0"
+          cols="12"
+          sm="4"
+        >
+          <v-card class="animate__animated animate__fadeInUp SoftBgGrey" >
+            <v-img :src="card.src" class="rounded-xl"></v-img>
+
+            <v-card-title class="justify-center">{{ card.Title }}</v-card-title>
+            <v-card-subtitle class="text-center">{{
               card.subTitle
-          }}</v-card-subtitle>
-
-
-        </v-card>
-      </div>
-
-    </div>
-    <v-card-actions class="justify-center ">
-      <v-btn class="pink white--text pl-12 pr-12 pt-6 pb-6" >
+            }}</v-card-subtitle>
+          </v-card>
+        </v-col>
+        <v-card-actions class="justify-center" id="btn--center">
+      <v-btn class="pink white--text pl-12 pr-12 pt-6 pb-6">
         TEST FOR FREE "24H"
-      <v-icon>mdi-arrow-right</v-icon></v-btn>
+        <v-icon>mdi-arrow-right</v-icon></v-btn
+      >
     </v-card-actions>
+      </v-row>
+    
+    </v-container>
+    
   </div>
 </template>
 
@@ -36,7 +48,8 @@ export default {
       {
         src: "https://i.imgur.com/cjWUQx3.png",
         Title: "SAFE & SECURE PAYMENT",
-        subTitle: "Secure Payments – No complicated billing processes required.",
+        subTitle:
+          "Secure Payments – No complicated billing processes required.",
       },
       {
         src: "https://i.imgur.com/Owv55bD.png",
@@ -47,7 +60,8 @@ export default {
       {
         src: "https://i.imgur.com/TNJpKjG.png",
         Title: "THOUSANDS OF CHANNELS",
-        subTitle: "Your IPTV subscription offers you international IPTV channels from around the world, including all major channels from the US, UK and across Europe.",
+        subTitle:
+          "Your IPTV subscription offers you international IPTV channels from around the world, including all major channels from the US, UK and across Europe.",
       },
     ],
   }),
@@ -83,6 +97,13 @@ export default {
   -moz-box-shadow: -4px -2px 15px -4px rgba(0, 0, 0, 0.47) !important;
   transition: all 0.4s ease-in;
 } */
+
+
+#btn--center{
+  margin-left: 550px !important;
+}
+
+
 
 @media only screen and (max-width: 600px) {
   .flex--cards {
