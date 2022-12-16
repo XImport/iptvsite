@@ -41,13 +41,16 @@
         small
         @click="switchTheme()"
         v-if="islight"
-
-
-
       >
         <v-icon> mdi-lightbulb-on </v-icon>
       </v-btn>
-      <v-btn class="transparent ml-4 white--text mode" fab small  @click="switchTheme()" v-if="isdark" >
+      <v-btn
+        class="transparent ml-4 white--text mode"
+        fab
+        small
+        @click="switchTheme()"
+        v-if="isdark"
+      >
         <v-icon> mdi-lightbulb </v-icon>
       </v-btn>
     </v-app-bar>
@@ -98,7 +101,7 @@ export default {
   data: () => ({
     navstate: "transparent elevation-0",
     isdark: null,
-    islight :null,
+    islight: null,
 
     scrollPosition: null,
     drawer: false,
@@ -130,8 +133,11 @@ export default {
     },
     switchTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-      localStorage.setItem('theme', this.$vuetify.theme.dark ? 'dark' : 'light');
-      this.isdark =!this.isdark;
+      localStorage.setItem(
+        "theme",
+        this.$vuetify.theme.dark ? "dark" : "light"
+      );
+      this.isdark = !this.isdark;
       this.islight = !this.islight;
       // if (this.$vuetify.theme.light) {
       //   console.log("light theme");
@@ -150,10 +156,10 @@ export default {
     window.addEventListener("scroll", this.updateScroll);
   },
 
-created(){
-  this.islight = true
-  this.isdark = false
-},
+  created() {
+    this.islight = true;
+    this.isdark = false;
+  },
 
   watch: {
     $route() {

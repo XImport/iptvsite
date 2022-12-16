@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="justify-center mt-12 animate__animated animate__fadeInUp">
-      <h1 class="text-center">IN OUR SERVICE</h1>
+      <h1 class="text-center">OUR SERVICES</h1>
       <v-divider class="mx-4 devider--title yellow"></v-divider>
     </div>
 
@@ -17,7 +17,7 @@
           cols="12"
           sm="4"
         >
-          <v-card class="animate__animated animate__fadeInUp SoftBgGrey" >
+          <v-card class="animate__animated animate__fadeInUp SoftBgGrey">
             <v-img :src="card.src" class="rounded-xl"></v-img>
 
             <v-card-title class="justify-center">{{ card.Title }}</v-card-title>
@@ -27,15 +27,13 @@
           </v-card>
         </v-col>
         <v-card-actions class="justify-center" id="btn--center">
-      <v-btn class="pink white--text pl-12 pr-12 pt-6 pb-6">
-        TEST FOR FREE "24H"
-        <v-icon>mdi-arrow-right</v-icon></v-btn
-      >
-    </v-card-actions>
+          <v-btn class="pink white--text pl-12 pr-12 pt-6 pb-6" to="/contact">
+            TEST FOR FREE "24H"
+            <v-icon>mdi-arrow-right</v-icon></v-btn
+          >
+        </v-card-actions>
       </v-row>
-    
     </v-container>
-    
   </div>
 </template>
 
@@ -98,12 +96,9 @@ export default {
   transition: all 0.4s ease-in;
 } */
 
-
-#btn--center{
+#btn--center {
   margin-left: 550px !important;
 }
-
-
 
 @media only screen and (max-width: 600px) {
   .flex--cards {

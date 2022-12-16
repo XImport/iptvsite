@@ -5,12 +5,15 @@
     >
       {{ HeaderPage }}
     </h1>
+    <h3 class="subfont--hero animate__animated animate__fadeInUp">
+      {{ SubHeaderPage }}
+    </h3>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["HeaderPage"],
+  props: ["HeaderPage", "SubHeaderPage"],
 };
 </script>
 
@@ -19,6 +22,12 @@ export default {
 
 .font--hero {
   font-family: "Klavika Condensed" !important;
+  font-size: 60px !important;
+}
+.subfont--hero {
+  font-family: "Klavika Condensed" !important;
+  font-size: 40px !important;
+  color: aliceblue;
 }
 
 @media only screen and (max-width: 600px) {

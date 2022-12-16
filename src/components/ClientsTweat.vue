@@ -111,7 +111,7 @@ export default {
       {
         avatar:
           "https://www.shareicon.net/data/512x512/2015/06/01/47332_man_512x512.png",
-        name: "Selina Gomez",
+        name: "Alex Dorame",
         title: "Everything is working perfectly",
         rating: 5,
         review:

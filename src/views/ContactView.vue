@@ -1,13 +1,14 @@
 <template>
   <div>
-    <HeaderPageVue HeaderPage="Contact US " />
+    <HeaderPageVue
+      HeaderPage="Contact US "
+      SubHeaderPage="contact us and get the best iptv servers "
+    />
     <v-container
       class="animate__animated animate__fadeInUpanimate__animated animate__fadeInUp pb-12"
     >
       <div>
-        <h1 class="text-center mt-6 font--hero">
-          Contact us complete this form
-        </h1>
+        <h1 class="text-center mt-6 font--hero">Fill The form</h1>
       </div>
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-alert
@@ -51,19 +52,20 @@
             class="mr-4"
             @click="validate"
           >
-            Contact Us
+            Send
           </v-btn>
         </div>
       </v-form>
     </v-container>
-    <Footer class="mt-12 animate__animated animate__fadeInUp" />
+    <div class="footer--margin">
+      <Footer class="animate__animated animate__fadeInUp" />
+    </div>
   </div>
 </template>
 
 <script>
 import HeaderPageVue from "@/components/HeaderPage.vue";
 import Footer from "@/components/FooterSection.vue";
-import axios from "axios";
 export default {
   components: { HeaderPageVue, Footer },
   data: () => ({
@@ -100,7 +102,7 @@ export default {
       var name = this.name;
       var email = this.email;
       var subscription = this.select;
-      var whatsappNumber = "212647894983";
+      var whatsappNumber = "212605576780";
       var url =
         "https://api.whatsapp.com/send?phone=" +
         whatsappNumber +
@@ -144,5 +146,8 @@ export default {
 
 .font--size--pack {
   font-size: 40px;
+}
+.footer--margin {
+  padding-top: 100px;
 }
 </style>

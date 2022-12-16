@@ -27,6 +27,7 @@
             </p>
             <div class="btn--mobile">
               <v-btn
+                to="/contact"
                 color="pink"
                 dark
                 absolute
@@ -34,6 +35,7 @@
                 >SUBSCRIBE NOW!!
               </v-btn>
               <v-btn
+                to="/contact"
                 color="pink"
                 dark
                 absolute
@@ -56,22 +58,24 @@
     <div class="pb-12">
       <v-container>
         <div>
-      <h1 class="text-center font--hero animate__animated animate__fadeInUp">
-        SIMPLE & FAIR PRICES FOR ALL
-      </h1>
-      <v-divider class="mx-4 devider--title yellow"></v-divider>
-      <h3
-        class="text-center mt-2 font--sub--hero font--hero animate__animated animate__fadeInUp"
-      >
-        which subscription plan is right for you ?
-      </h3>
-      <h4
-        class="text-center mt-2 font--hero font--size--pack animate__animated animate__fadeInUp"
-        data-aos="zoom-in"
-      >
-        STANDARD PACK
-      </h4>
-    </div>
+          <h1
+            class="text-center font--hero animate__animated animate__fadeInUp"
+          >
+            SIMPLE & FAIR PRICES FOR ALL
+          </h1>
+          <v-divider class="mx-4 devider--title yellow"></v-divider>
+          <h3
+            class="text-center mt-2 font--sub--hero font--hero animate__animated animate__fadeInUp"
+          >
+            which subscription plan is right for you ?
+          </h3>
+          <h4
+            class="text-center mt-2 font--hero font--size--pack animate__animated animate__fadeInUp"
+            data-aos="zoom-in"
+          >
+            STANDARD PACK
+          </h4>
+        </div>
         <PricePlans />
       </v-container>
       <v-container>
@@ -106,21 +110,22 @@ export default {
     colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
     items: [
       {
-        src: "https://wallpaperaccess.com/full/2387027.jpg",
-        text: "Top 1 Watched Movies",
-        subtext: "Watch anywhere. Cancel anytime.",
+        src: "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt72f2c0c9705487c9/6313066ee60d4245dae37aa7/erling_haaland.png",
+        text: "The Best Global IPTV  Service Provider",
+        subtext: "Watch anytime. from anywhere.",
       },
 
       {
         src: "https://wallpapercave.com/wp/wp1815802.jpg",
-        text: "SWANGIN' AND BANGIN' TIME",
+        text: "Premium IPTV Service",
         subtext:
           "The Beast Is Back In Action And He's Determined To Leave The UFC APEX Victorious",
       },
+
       {
-        src: "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt72f2c0c9705487c9/6313066ee60d4245dae37aa7/erling_haaland.png",
-        text: "THE ULTIMATE WEBHOSTING PROVIDER  ",
-        subtext: "Watch anywhere. Cancel anytime.",
+        src: "https://wallpaperaccess.com/full/2387027.jpg",
+        text: "Top 1 Watched Movies",
+        subtext: "Watch anytime. from anywhere.",
       },
     ],
   }),
@@ -194,10 +199,8 @@ export default {
   color: yellow !important;
 }
 
-
 .font--size--pack {
-    font-size: 40px;
-    color: #275084;
-  }
-  
+  font-size: 40px;
+  color: #275084;
+}
 </style>

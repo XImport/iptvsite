@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ChannelsList from "../views/ChannelsList.vue";
 import Contact from "../views/ContactView.vue";
-import Pricing from "../views/IptvPricing.vue"
+import Pricing from "../views/IptvPricing.vue";
 Vue.use(VueRouter);
 
 const routes = [

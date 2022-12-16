@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="justify-center"
-
-  >
-
-    <div class="background mt-6 animate__animated animate__fadeInUp" >
+  <div class="justify-center">
+    <div class="background mt-6 animate__animated animate__fadeInUp">
       <div class="container">
         <div class="panel pricing-table">
           <div class="pricing-plan">
@@ -16,15 +12,15 @@
             <h2 class="pricing-header">3 MONTH</h2>
             <ul class="pricing-features">
               <li class="pricing-features-item">1 Login</li>
-              <li class="pricing-features-item">15,000 Live Tv</li>
-              <li class="pricing-features-item">30k Vod Movies</li>
-              <li class="pricing-features-item">50K Vod Series</li>
+              <li class="pricing-features-item">10,000 Live Tv</li>
+              <li class="pricing-features-item">10k Vod Movies</li>
+              <li class="pricing-features-item">10K Vod Series</li>
 
               <li class="pricing-features-item">Serveur Stable</li>
               <li class="pricing-features-item">Compatible With All Devices</li>
             </ul>
-            <span class="pricing-price">$400</span>
-            <a href="#/" class="pricing-button">BUY NOW</a>
+            <span class="pricing-price">$19</span>
+            <a href="/contact" class="pricing-button">BUY NOW</a>
           </div>
 
           <div class="pricing-plan">
@@ -37,14 +33,14 @@
             <ul class="pricing-features">
               <li class="pricing-features-item">1 Login</li>
               <li class="pricing-features-item">15,000 Live Tv</li>
-              <li class="pricing-features-item">30k Vod Movies</li>
-              <li class="pricing-features-item">50K Vod Series</li>
+              <li class="pricing-features-item">15k Vod Movies</li>
+              <li class="pricing-features-item">15K Vod Series</li>
 
               <li class="pricing-features-item">Serveur Stable</li>
               <li class="pricing-features-item">Compatible With All Devices</li>
             </ul>
-            <span class="pricing-price">$150</span>
-            <a href="#/" class="pricing-button">BUY NOW</a>
+            <span class="pricing-price">$29</span>
+            <a href="/contact" class="pricing-button">BUY NOW</a>
           </div>
 
           <div class="pricing-plan">
@@ -55,16 +51,16 @@
             />
             <h2 class="pricing-header">12 MONTH</h2>
             <ul class="pricing-features">
-              <li class="pricing-features-item">1 Login</li>
+              <li class="pricing-features-item">3 Login</li>
               <li class="pricing-features-item">15,000 Live Tv</li>
-              <li class="pricing-features-item">30k Vod Movies</li>
-              <li class="pricing-features-item">50K Vod Series</li>
+              <li class="pricing-features-item">20k Vod Movies</li>
+              <li class="pricing-features-item">20K Vod Series</li>
 
               <li class="pricing-features-item">Serveur Stable</li>
               <li class="pricing-features-item">Compatible With All Devices</li>
             </ul>
-            <span class="pricing-price">$400</span>
-            <a href="#/" class="pricing-button">BUY NOW</a>
+            <span class="pricing-price">$49</span>
+            <a href="/contact" class="pricing-button">BUY NOW</a>
           </div>
         </div>
       </div>

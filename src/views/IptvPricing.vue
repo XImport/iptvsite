@@ -5,6 +5,7 @@
     <!-- Content goes here  -->
     <Pricing />
 
+    <v-container> </v-container>
     <div class="footer--margin">
       <Footer />
     </div>
@@ -57,6 +58,6 @@ body {
 }
 
 .footer--margin {
-  margin-top: 200px !important;
+  padding-top: 10%;
 }
 </style>

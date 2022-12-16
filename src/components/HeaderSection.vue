@@ -1,14 +1,23 @@
 <template>
-  <v-container class="justify-center" data-aos="fade-up" data-aos-offset="200" data-aos-once="true"
-    data-aos-anchor-placement="top-center">
+  <v-container
+    class="justify-center"
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+  >
     <div>
       <div>
-        <h1 class="text-center mt-12 text--font animate__animated animate__fadeInUp">
+        <h1
+          class="text-center mt-12 text--font animate__animated animate__fadeInUp"
+        >
           Amazing Offer
         </h1>
         <v-divider class="mx-4 devider--title yellow"></v-divider>
       </div>
-      <h1 class="text-center mt-6 text--font animate__animated animate__fadeInUp">
+      <h1
+        class="text-center mt-6 text--font animate__animated animate__fadeInUp"
+      >
         World Cup , Movies And Series In One Place
       </h1>
       <p class="text-center animate__animated animate__fadeInUp">
@@ -16,9 +25,21 @@
         on your device
       </p>
     </div>
-    <CarouselCard ref="carouselCardRef" class="animate__animated animate__fadeInUp" :interval="7000" :autoplay="false"
-      :height="CheckMobile" type="card" arrow="always" @change="changeHandle">
-      <CarouselCardItem v-for="img in items" :key="img.index" :name="`cc_${img.index}`">
+    <CarouselCard
+      ref="carouselCardRef"
+      class="animate__animated animate__fadeInUp"
+      :interval="7000"
+      :autoplay="false"
+      :height="CheckMobile"
+      type="card"
+      arrow="always"
+      @change="changeHandle"
+    >
+      <CarouselCardItem
+        v-for="img in items"
+        :key="img.index"
+        :name="`cc_${img.index}`"
+      >
         <v-img :src="img.src" />
         <h1 v-text="i"></h1>
       </CarouselCardItem>
@@ -36,7 +57,7 @@ export default defineComponent({
 
   data() {
     return {
-      CheckMobile : null,
+      CheckMobile: null,
       items: [
         {
           src: "https://i.imgur.com/NzVpgPb.jpeg",
@@ -71,17 +92,21 @@ export default defineComponent({
     },
   },
   created() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
       // true for mobile device
 
       console.log("mobile device");
-      this.CheckMobile = '200px'
+      this.CheckMobile = "200px";
     } else {
       // false for not mobile device
       console.log("not mobile device");
-      this.CheckMobile = '700px'
+      this.CheckMobile = "700px";
     }
-  }
+  },
 });
 </script>
 
